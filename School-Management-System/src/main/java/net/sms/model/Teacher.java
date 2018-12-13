@@ -16,12 +16,12 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "teacher")
-public class Teacher extends BaseEntity {
+public class Teacher extends Person {
 
 
     @Column(name = "teacher_id", nullable = false)
     private String teacherID;
-    @Column(name = "qualification", nullable = false)
+    @Column(name = "qualificantion ", nullable = false)
     private String qualification;
     @Column(name = "years_of_experience", nullable = false)
     private String yearsOfExperience;
@@ -61,5 +61,13 @@ public class Teacher extends BaseEntity {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public List<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
     }
 }

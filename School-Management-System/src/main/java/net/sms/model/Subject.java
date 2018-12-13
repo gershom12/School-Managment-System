@@ -9,7 +9,7 @@ import javax.persistence.Table;
  * @author Gershom.Maluleke
  */
 @Entity
-@Table(name = "course")
+@Table(name = "subject")
 public class Subject extends BaseEntity {
 
     @Column(name = "name_of_subject", nullable = false)

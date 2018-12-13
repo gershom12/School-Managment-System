@@ -51,6 +51,6 @@ public abstract class GenericPersistenceFacade<T extends Serializable> implement
 
     @Override
     public T find(Long id) {
-      return getCurrentSession().get(entityClass, id);
+      return (T)getCurrentSession().get(entityClass, id);
     } 
 }

@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
 public class BaseEntity implements Serializable{
     
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id",unique = true,insertable = false,nullable = false,updatable = false)
     private Long id;
     @Column(name = "created_date")
