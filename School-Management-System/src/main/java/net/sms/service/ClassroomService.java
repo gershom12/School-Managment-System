@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
  *
  * @author Gershom.Maluleke
  */
+
 @Service
 public class ClassroomService extends GenericPersistenceFacade<Classroom> implements ClassroomServiceLocal{
 

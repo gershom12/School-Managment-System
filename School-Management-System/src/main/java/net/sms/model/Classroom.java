@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -22,13 +23,13 @@ public class Classroom extends BaseEntity {
     @Column(name = "number_of_students", nullable = false)
     private int numberOfStudents;
     @Column(name = "teachers", nullable = false)
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Teacher> teachers = new ArrayList<Teacher>();
     @Column(name = "students", nullable = false)
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Student> students = new ArrayList<Student>();
     @Column(name = "subjects", nullable = false)
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Subject> subjects = new ArrayList<Subject>();
 
     public String getClassRoomNumber() {

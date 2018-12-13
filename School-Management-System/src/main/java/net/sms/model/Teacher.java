@@ -2,8 +2,11 @@ package net.sms.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -25,7 +28,7 @@ public class Teacher extends BaseEntity {
     @Column(name = "salary", nullable = false)
     private double salary;
     @Column(name = "subjects", nullable = false)
-    @OneToMany
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Subject> subjects = new ArrayList<Subject>();
 
     public String getTeacherID() {
