@@ -1,0 +1,14 @@
+net\sms\model\Subject.class
+net\sms\model\Classroom.class
+net\sms\persistence\BaseDAO.class
+net\sms\service\SchoolServiceLocal.class
+net\sms\model\Student.class
+net\sms\model\Teacher.class
+net\sms\model\BaseEntity.class
+net\sms\service\SchoolService.class
+net\sms\main\App.class
+net\sms\config\DataSourceConfig.class
+net\sms\model\School.class
+net\sms\persistence\GenericPersistenceFacade.class
+net\sms\config\ApplicationConfig.class
+net\sms\config\DataSourceUtility.class
