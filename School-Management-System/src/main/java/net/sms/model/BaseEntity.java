@@ -17,8 +17,9 @@ import javax.persistence.TemporalType;
 
 @MappedSuperclass
 public class BaseEntity implements Serializable{
+    
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     @Column(name = "id",unique = true,insertable = false,nullable = false,updatable = false)
     private Long id;
     @Column(name = "created_date")

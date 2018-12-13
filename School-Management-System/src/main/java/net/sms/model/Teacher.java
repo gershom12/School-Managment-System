@@ -15,16 +15,11 @@ import javax.persistence.Table;
 @Table(name = "teacher")
 public class Teacher extends BaseEntity {
 
-    @Column(name = "name", nullable = false)
-    private String name;
-    @Column(name = "address", nullable = false)
-    private String address;
+
     @Column(name = "teacher_id", nullable = false)
     private String teacherID;
     @Column(name = "qualification", nullable = false)
     private String qualification;
-    @Column(name = "contactNumber", nullable = false)
-    private String contactNumber;
     @Column(name = "years_of_experience", nullable = false)
     private String yearsOfExperience;
     @Column(name = "salary", nullable = false)
@@ -32,22 +27,6 @@ public class Teacher extends BaseEntity {
     @Column(name = "subjects", nullable = false)
     @OneToMany
     private List<Subject> subjects = new ArrayList<Subject>();
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     public String getTeacherID() {
         return teacherID;
@@ -63,14 +42,6 @@ public class Teacher extends BaseEntity {
 
     public void setQualification(String qualification) {
         this.qualification = qualification;
-    }
-
-    public String getContactNumber() {
-        return contactNumber;
-    }
-
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
     }
 
     public String getYearsOfExperience() {
