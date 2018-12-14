@@ -53,10 +53,7 @@ public class SchooManagementSystemlTests
     @Test
     public void testPersistSchool(){
         
-        List classrooms = new ArrayList();
-        List students = new ArrayList();
-        List teachers = new ArrayList();
-        List subjects = new ArrayList();
+
         
         school = new School();
         school.setName("Shingwedzi high school");
@@ -75,7 +72,8 @@ public class SchooManagementSystemlTests
         classroom.setUpdatedDate(new Date());
         classroom.setClassRoomNumber("Grade 12B");
         classroom.setNumberOfStudents(45);
-        classrooms.add(classroom);
+
+        
         
         Teacher teacher = new Teacher();
         teacher.setCreatedBy("Gershom");
@@ -86,7 +84,16 @@ public class SchooManagementSystemlTests
         teacher.setSalary(23403.45);
         teacher.setTeacherID("45");
         teacher.setYearsOfExperience("5");
-        teachers.add(teachers);
+        teacher.setAddress("Pretoria, Sunnyside");
+        teacher.setDateOfBirth(new Date());
+        teacher.setEmail("Gershom@gmail.com");
+        teacher.setMobileNumber("0839929293");
+        teacher.setMotherTongue("Xitsonga");
+        teacher.setName("Micheal");
+        teacher.setNationality("South African");
+        teacher.setSurname("Baloyi");
+        teacher.setGender("Male");
+       
         
         Student student = new Student();
         student.setCreatedBy("Gershom");
@@ -103,7 +110,7 @@ public class SchooManagementSystemlTests
         student.setNationality("South African");
         student.setSurname("Maluleke");
         student.setYearMark(56);
-        students.add(student);
+        
         
         Subject subject = new Subject();
         subject.setCreatedBy("Gershom");
@@ -114,18 +121,19 @@ public class SchooManagementSystemlTests
         subject.setHoursPerWeek(12);
         subject.setDescription("Mathematical expressions");
         subject.setName("Mathematics");
-        subjects.add(subject);
+
         
-//        school.setClassrooms(classrooms);
-//        school.setStudents(students);
-//        school.setTeachers(teachers);
-//        
-//        classroom.setStudents(students);
-//        classroom.setSubjects(subjects);
-//        classroom.setTeachers(teachers);
-//        
-//        student.setSubjects(subjects);
-//        teacher.setSubjects(subjects);
+        student.addSubject(subject);
+        teacher.addSubject(subject);
+        
+        classroom.addStudent(student);
+        classroom.addSubject(subject);
+        classroom.addTeacher(teacher);
+
+        
+        school.addClassrooms(classroom);
+        school.addStudent(student);
+        school.addTeacher(teacher);
         
         schoolService.save(school);
     }

@@ -5,11 +5,12 @@ import java.util.List;
 /**
  *
  * @author Gershom.Maluleke
+ * 
  */
 
 public interface BaseDAO<T> {
-    
-    public void save(T entity);
+
+    public Long save(T entity);
 
     public void delete(T entity);
 

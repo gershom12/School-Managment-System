@@ -1,8 +1,6 @@
 package net.sms.persistence;
 
-import java.io.Serializable;
 import java.util.List;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -11,46 +9,52 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
- * @author Gershom.Maluleke
+ * @author gershom This is the persistence layer to which all services to be
+ * defined in the service layer extends in order to inherit the generic crud
+ * functionalities.
  */
 @Repository
 @Transactional
-public abstract class GenericPersistenceFacade<T extends Serializable> implements BaseDAO<T> {
+public abstract class GenericPersistenceFacade<T> implements BaseDAO<T> {
 
     @Autowired
     private SessionFactory sessionFactory;
+    @Autowired
+    private HibernateTemplate hibernateTemplate;
 
-    final Class<T> entityClass;
-    
-    public GenericPersistenceFacade(Class<T> entityClass){
+    private final Class<T> entityClass;
+
+    public GenericPersistenceFacade(Class<T> entityClass) {
         this.entityClass = entityClass;
     }
-    
-    protected final Session getCurrentSession(){
-        return sessionFactory.getCurrentSession();
-    }
+
+    /**
+     *
+     * @param entity
+     * @return
+     */
     @Override
-    public void save(T entity) {
-       getCurrentSession().persist(entity);
+    public Long save(T entity) {
+        return (Long) hibernateTemplate.save(entity);
     }
 
     @Override
     public void delete(T entity) {
-        getCurrentSession().delete(entity);
+        hibernateTemplate.delete(entity);
     }
-
     @Override
     public void update(T entity) {
-       getCurrentSession().merge(entity);
+        hibernateTemplate.update(entity);
     }
 
     @Override
     public List<T> findAll() {
-        return getCurrentSession().createQuery("from "+entityClass.getName()).list();
+        return hibernateTemplate.loadAll(entityClass);
     }
 
     @Override
     public T find(Long id) {
-      return (T)getCurrentSession().get(entityClass, id);
-    } 
+        return (T) hibernateTemplate.load(entityClass, id);
+    }
+
 }

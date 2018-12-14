@@ -19,13 +19,13 @@ import javax.persistence.Table;
 public class Teacher extends Person {
 
 
-    @Column(name = "teacher_id", nullable = false)
+    @Column(name = "teacher_id", nullable = true)
     private String teacherID;
-    @Column(name = "qualificantion ", nullable = false)
+    @Column(name = "qualificantion ", nullable = true)
     private String qualification;
     @Column(name = "years_of_experience", nullable = false)
     private String yearsOfExperience;
-    @Column(name = "salary", nullable = false)
+    @Column(name = "salary", nullable = true)
     private double salary;
     @Column(name = "subjects", nullable = false)
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -69,5 +69,9 @@ public class Teacher extends Person {
 
     public void setSubjects(List<Subject> subjects) {
         this.subjects = subjects;
+    }
+    
+    public void addSubject(Subject subject) {
+        this.subjects.add(subject);
     }
 }

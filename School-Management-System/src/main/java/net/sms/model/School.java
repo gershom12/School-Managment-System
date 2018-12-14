@@ -27,7 +27,7 @@ public class School extends BaseEntity{
     @Column(name = "contact_number", nullable = false)
     private String contactNumber;
     @Column(name = "class_rooms", nullable = false)
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.EAGER )
     private List<Classroom> classrooms = new ArrayList<Classroom>();
     @Column(name = "teachers", nullable = false)
     @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.EAGER)
@@ -90,5 +90,17 @@ public class School extends BaseEntity{
 
     public void setStudents(List<Student> students) {
         this.students = students;
+    }
+    
+    public void addTeacher(Teacher teacher) {
+        this.teachers.add(teacher);
+    }
+    
+    public void addStudent(Student student) {
+        this.students.add(student);
+    }
+    
+    public void addClassrooms(Classroom classroom) {
+        this.classrooms.add(classroom);
     }
 }

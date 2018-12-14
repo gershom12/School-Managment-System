@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: net.sms.test.SchooManagementSystemlTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.94 s - in net.sms.test.SchooManagementSystemlTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.883 s <<< FAILURE! - in net.sms.test.SchooManagementSystemlTests
+testPersistSchool(net.sms.test.SchooManagementSystemlTests)  Time elapsed: 0.143 s  <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [years_of_experience]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at net.sms.test.SchooManagementSystemlTests.testPersistSchool(SchooManagementSystemlTests.java:138)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at net.sms.test.SchooManagementSystemlTests.testPersistSchool(SchooManagementSystemlTests.java:138)
+Caused by: org.postgresql.util.PSQLException: 
+ERROR: null value in column "years_of_experience" violates not-null constraint
+  Detail: Failing row contains (Student, 3, Gershom, 2018-12-14 19:24:56.691, Gershom, 2018-12-14 19:24:56.691, Pretoria, Sunnyside, 0823454838, 2018-12-14 19:24:56.691, u13229908@tuks.co.za, Male, Xitsonga, Gershom, South African, Maluleke, 56, null, null, null, null).
+	at net.sms.test.SchooManagementSystemlTests.testPersistSchool(SchooManagementSystemlTests.java:138)
+

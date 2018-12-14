@@ -19,7 +19,7 @@ import javax.persistence.Table;
 @Table(name = "student")
 public class Student extends Person {
 
-    @Column(name = "year_mark", nullable = false)
+    @Column(name = "year_mark", nullable = true)
     private double yearMark;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Subject> subjects = new ArrayList<Subject>();
@@ -38,5 +38,9 @@ public class Student extends Person {
 
     public void setSubjects(List<Subject> subjects) {
         this.subjects = subjects;
+    }
+    
+    public void addSubject(Subject subject) {
+        this.subjects.add(subject);
     }
 }

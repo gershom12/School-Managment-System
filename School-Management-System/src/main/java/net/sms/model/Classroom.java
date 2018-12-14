@@ -71,4 +71,16 @@ public class Classroom extends BaseEntity {
     public void setSubjects(List<Subject> subjects) {
         this.subjects = subjects;
     }
+    
+    public void addSubject(Subject subject) {
+        this.subjects.add(subject);
+    }
+    
+    public void addTeacher(Teacher teacher) {
+        this.teachers.add(teacher);
+    }
+    
+    public void addStudent(Student student) {
+        this.students.add(student);
+    }
 }
