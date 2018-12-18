@@ -7,7 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -16,7 +16,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "teacher")
-public class Teacher extends Person {
+public class Teacher extends BaseEntity {
 
 
     @Column(name = "teacher_id", nullable = false)
@@ -27,9 +27,10 @@ public class Teacher extends Person {
     private String yearsOfExperience;
     @Column(name = "salary", nullable = false)
     private double salary;
-    @Column(name = "subjects", nullable = false)
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Subject> subjects = new ArrayList<Subject>();
+    @OneToOne( cascade = CascadeType.ALL,fetch = FetchType.EAGER,targetEntity =Person.class)
+    private Person person;
     
     public Teacher(){
         
@@ -77,5 +78,13 @@ public class Teacher extends Person {
     
     public void addSubject(Subject subject) {
         this.subjects.add(subject);
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }

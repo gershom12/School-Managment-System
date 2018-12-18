@@ -1,1 +1,5 @@
-net\sms\test\SchooManagementSystemlTests.class
+net\sms\test\SubjectTestCase.class
+net\sms\test\TeacherTestCase.class
+net\sms\test\SchoolTestCase.class
+net\sms\test\StudentTestCase.class
+net\sms\test\ClassroomTestCase.class

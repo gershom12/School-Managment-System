@@ -1,3 +1,4 @@
+net\sms\ui\AddSchool.class
 net\sms\service\SchoolServiceLocal.class
 net\sms\service\SubjectServiceLocal.class
 net\sms\service\ClassroomServiceLocal.class
@@ -6,6 +7,7 @@ net\sms\service\TeacherService.class
 net\sms\model\Teacher.class
 net\sms\service\ClassroomService.class
 net\sms\main\App.class
+DashboardView.class
 net\sms\persistence\GenericPersistenceFacade.class
 net\sms\service\StudentServiceLocal.class
 net\sms\model\Person.class
@@ -17,8 +19,10 @@ net\sms\persistence\BaseDAO.class
 net\sms\service\SubjectService.class
 net\sms\model\BaseEntity.class
 net\sms\service\SchoolService.class
+net\sms\ui\SchoolBean.class
 net\sms\config\DataSourceConfig.class
 net\sms\model\School.class
 net\sms\service\TeacherServiceLocal.class
 net\sms\config\ApplicationConfig.class
 net\sms\config\DataSourceUtility.class
+net\sms\ui\MenuBean.class

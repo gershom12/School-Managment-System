@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -16,12 +17,14 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "student")
-public class Student extends Person {
+public class Student extends BaseEntity {
 
     @Column(name = "year_mark", nullable = true)
     private double yearMark;
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Subject> subjects = new ArrayList<Subject>();
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER,targetEntity =Person.class)
+    private Person person;
     
     public Student(){
         
@@ -45,5 +48,13 @@ public class Student extends Person {
     
     public void addSubject(Subject subject) {
         this.subjects.add(subject);
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }

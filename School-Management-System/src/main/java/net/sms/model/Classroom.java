@@ -22,13 +22,10 @@ public class Classroom extends BaseEntity {
     private String classRoomNumber;
     @Column(name = "number_of_students", nullable = false)
     private int numberOfStudents;
-    @Column(name = "teachers", nullable = false)
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Teacher> teachers = new ArrayList<Teacher>();
-    @Column(name = "students", nullable = false)
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Student> students = new ArrayList<Student>();
-    @Column(name = "subjects", nullable = false)
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Subject> subjects = new ArrayList<Subject>();
     
