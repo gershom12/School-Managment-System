@@ -19,17 +19,21 @@ import javax.persistence.Table;
 public class Teacher extends Person {
 
 
-    @Column(name = "teacher_id", nullable = true)
+    @Column(name = "teacher_id", nullable = false)
     private String teacherID;
-    @Column(name = "qualificantion ", nullable = true)
+    @Column(name = "qualificantion ", nullable = false)
     private String qualification;
     @Column(name = "years_of_experience", nullable = false)
     private String yearsOfExperience;
-    @Column(name = "salary", nullable = true)
+    @Column(name = "salary", nullable = false)
     private double salary;
     @Column(name = "subjects", nullable = false)
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Subject> subjects = new ArrayList<Subject>();
+    
+    public Teacher(){
+        
+    }
 
     public String getTeacherID() {
         return teacherID;

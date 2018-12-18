@@ -27,14 +27,18 @@ public class School extends BaseEntity{
     @Column(name = "contact_number", nullable = false)
     private String contactNumber;
     @Column(name = "class_rooms", nullable = false)
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.EAGER )
+    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Classroom> classrooms = new ArrayList<Classroom>();
     @Column(name = "teachers", nullable = false)
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Teacher> teachers = new ArrayList<Teacher>();
     @Column(name = "students", nullable = false)
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Student> students = new ArrayList<Student>();
+    
+    public School(){
+        
+    }
     
     public String getName() {
         return name;

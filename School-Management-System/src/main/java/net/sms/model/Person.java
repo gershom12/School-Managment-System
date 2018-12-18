@@ -3,14 +3,14 @@ package net.sms.model;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 /**
  *
  * @author Gershom.Maluleke
  */
-@Entity
-@Table(name = "person")
+@MappedSuperclass
 public class Person extends BaseEntity {
 
     @Column(name = "name", nullable = false)
@@ -31,6 +31,10 @@ public class Person extends BaseEntity {
     private Date dateOfBirth;
     @Column(name = "gender", nullable = false)
     private String gender;
+    
+    public Person(){
+        
+    }
 
     public String getName() {
         return name;
