@@ -1,28 +1,28 @@
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\model\Subject.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\ui\SchoolBean.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\main\App.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\model\Classroom.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\service\SchoolService.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\service\SubjectService.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\service\TeacherService.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\model\Teacher.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\persistence\BaseDAO.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\ui\DashboardView.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\config\ApplicationConfig.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\service\SchoolServiceLocal.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\config\DataSourceUtility.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\config\DataSourceConfig.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\service\TeacherServiceLocal.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\service\ClassroomService.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\service\StudentService.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\persistence\GenericPersistenceFacade.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\model\Student.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\service\StudentServiceLocal.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\ui\MenuBean.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\ui\AddSchool.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\model\Person.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\ui\WebConfiguration.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\service\SubjectServiceLocal.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\model\BaseEntity.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\model\School.java
-C:\work\School-Management-System\School-Management-System\src\main\java\net\sms\service\ClassroomServiceLocal.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\model\Classroom.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\model\Student.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\service\StudentService.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\ui\MenuBean.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\model\Subject.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\service\StudentServiceLocal.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\persistence\GenericPersistenceFacade.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\service\ClassroomServiceLocal.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\service\SchoolService.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\model\School.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\service\SchoolServiceLocal.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\main\App.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\service\SubjectService.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\config\DataSourceUtility.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\service\TeacherServiceLocal.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\model\Person.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\config\DataSourceConfig.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\persistence\BaseDAO.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\service\SubjectServiceLocal.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\ui\AddSchool.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\service\TeacherService.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\config\ApplicationConfig.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\ui\WebConfiguration.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\ui\DashboardView.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\model\Teacher.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\model\BaseEntity.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\service\ClassroomService.java
+C:\work\School Management System github repo\School-Managment-System\School-Management-System\src\main\java\net\sms\ui\SchoolBean.java
